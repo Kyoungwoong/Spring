@@ -16,9 +16,16 @@ public class MemberService {
 
     private final MemberRepository memberRepository;// = new MemoryMemberRepository();
 
-    @Autowired
+//    @Autowired
+//    public MemberService(MemoryMemberRepository memberRepository) {
+//
+//        this.memberRepository = memberRepository;
+//    }
     public MemberService(MemoryMemberRepository memberRepository) {
-
+        this.memberRepository = memberRepository;
+    }
+    //     @Autowired
+    public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
